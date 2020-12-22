@@ -187,7 +187,7 @@ class AATree
         {
             inorder(r.left);
             System.out.print(r.element +" ");
-            this.inorder += String.valueOf(r.element) + " ";
+            this.inorder += String.valueOf(r.element) + " -> ";
             inorder(r.right);
         }
     }
@@ -201,7 +201,7 @@ class AATree
         if (r != nil)
         {
             System.out.print(r.element +" ");
-            preorder += String.valueOf(r.element) + " ";
+            preorder += String.valueOf(r.element) + " -> ";
             preorder(r.left);
             preorder(r.right);
         }
@@ -218,7 +218,7 @@ class AATree
             postorder(r.left);
             postorder(r.right);
             System.out.print(r.element +" ");
-            postorder += String.valueOf(r.element) + " ";
+            postorder += String.valueOf(r.element) + " -> ";
         }
     }
 
