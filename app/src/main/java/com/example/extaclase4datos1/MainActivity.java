@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             String inorder = aaTree.getInorderString();
             inorderString.setText(inorder);
             aaTree.setInorderString("");
+
         }
     }
 }
