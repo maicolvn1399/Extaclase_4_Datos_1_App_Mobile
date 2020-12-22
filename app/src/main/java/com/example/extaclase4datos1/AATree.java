@@ -41,6 +41,7 @@ class AATree
 {
     private AANode root;
     private static AANode nil = new AANode();
+    String inorder;
 
     /** Constructor **/
     public AATree()
@@ -184,6 +185,7 @@ class AATree
         {
             inorder(r.left);
             System.out.print(r.element +" ");
+            this.inorder += String.valueOf(r.element) + " ";
             inorder(r.right);
         }
     }
@@ -215,6 +217,15 @@ class AATree
             System.out.print(r.element +" ");
         }
     }
+
+    public String getInorderString(){
+        return inorder;
+    }
+
+    public void setInorderString(String inorderString){
+        this.inorder = inorderString;
+    }
+
 }
 
 
