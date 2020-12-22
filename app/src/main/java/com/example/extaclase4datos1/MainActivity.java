@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText numberBox;
     TextView inorderString;
+    TextView preorderString;
+    TextView postorderString;
     AATree aaTree;
 
 
@@ -21,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         numberBox = findViewById(R.id.boxNumbers);
         inorderString = findViewById(R.id.inorderText);
-
+        preorderString = findViewById(R.id.preorderText);
+        postorderString = findViewById(R.id.postorderText);
         aaTree = new AATree();
     }
 
@@ -40,11 +43,34 @@ public class MainActivity extends AppCompatActivity {
             inorderString.setText(inorder);
             aaTree.setInorderString("");
 
+            aaTree.preorder();
+            String preorder = aaTree.getPreorderString();
+            preorderString.setText(preorder);
+            aaTree.SetPreorderString("");
 
-
-
-
-
+            aaTree.postorder();
+            String postorder = aaTree.getPostorderString();
+            postorderString.setText(postorder);
+            aaTree.SetPostorderString("");
         }
+
+
     }
+
+    public void ClearButton(View view){
+        aaTree.clear();
+        Toast.makeText(this, "AA Tree has been cleared", Toast.LENGTH_SHORT).show();
+        inorderString.setText("");
+        aaTree.setInorderString("");
+
+        preorderString.setText("");
+        aaTree.SetPreorderString("");
+
+        postorderString.setText("");
+        aaTree.SetPostorderString("");
+
+
+
+    }
+
 }
