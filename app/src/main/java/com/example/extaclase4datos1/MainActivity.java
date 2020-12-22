@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
             inorderString.setText(inorder);
             aaTree.setInorderString("");
 
+
+
+
+
+
         }
     }
 }
